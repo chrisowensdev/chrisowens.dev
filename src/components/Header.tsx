@@ -1,8 +1,10 @@
 // components/Header.tsx
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import Container from "./Container";
 
 const BRAND = { primary: "#2175a2", accent: "#21a37c" };
 
@@ -20,52 +22,59 @@ export default function Header() {
 				className="sticky top-0 z-50 border-b backdrop-blur"
 				style={{ backgroundColor: "rgba(255,255,255,0.8)" }}
 			>
-				<div className="mx-auto max-w-7xl px-4 py-3 flex items-center justify-between">
-					<div className="flex items-center gap-3">
-						<div
-							className="h-9 w-9 rounded-2xl"
-							style={{ background: BRAND.primary }}
-						/>
-						<span className="font-semibold">ChrisOwens.Dev</span>
-					</div>
+				<Container>
+					<div className="mx-auto max-w-7xl px-4 py-3 flex items-center justify-between">
+						<div className="flex items-center gap-3">
+							<Image
+								src="/profile-image.png"
+								width={40}
+								height={40}
+								alt="profile Image"
+								className="rounded-2xl"
+							/>
+							<span className="font-semibold">
+								ChrisOwens.Dev
+							</span>
+						</div>
 
-					<nav className="hidden md:flex gap-6 text-sm">
-						<a href="#about" className="hover:opacity-70">
-							About
-						</a>
-						<a href="#services" className="hover:opacity-70">
-							Services
-						</a>
-						<a href="#work" className="hover:opacity-70">
-							Work
-						</a>
-						<a href="#contact" className="hover:opacity-70">
-							Contact
-						</a>
-					</nav>
+						<nav className="hidden md:flex gap-6 text-sm">
+							<a href="#about" className="hover:opacity-70">
+								About
+							</a>
+							<a href="#services" className="hover:opacity-70">
+								Services
+							</a>
+							<a href="#work" className="hover:opacity-70">
+								Work
+							</a>
+							<a href="#contact" className="hover:opacity-70">
+								Contact
+							</a>
+						</nav>
 
-					<div className="flex items-center gap-2">
-						<a
-							href="#contact"
-							className="hidden md:inline-flex rounded-xl px-3 py-2 text-sm text-white transition"
-							style={{ background: BRAND.primary }}
-						>
-							Free Website Assessment
-						</a>
-						<button
-							className="md:hidden inline-flex items-center justify-center rounded-lg border px-3 py-2 text-sm"
-							aria-expanded={mobileOpen}
-							aria-controls="mobile-menu"
-							aria-label="Toggle menu"
-							onClick={() => setMobileOpen((v) => !v)}
-						>
-							<span className="sr-only">Menu</span>
-							<div className="h-5 w-5 grid place-items-center">
-								{!mobileOpen ? "≡" : "×"}
-							</div>
-						</button>
+						<div className="flex items-center gap-2">
+							<a
+								href="#contact"
+								className="hidden md:inline-flex rounded-xl px-3 py-2 text-sm text-white transition"
+								style={{ background: BRAND.primary }}
+							>
+								Free Website Assessment
+							</a>
+							<button
+								className="md:hidden inline-flex items-center justify-center rounded-lg border px-3 py-2 text-sm"
+								aria-expanded={mobileOpen}
+								aria-controls="mobile-menu"
+								aria-label="Toggle menu"
+								onClick={() => setMobileOpen((v) => !v)}
+							>
+								<span className="sr-only">Menu</span>
+								<div className="h-5 w-5 grid place-items-center">
+									{!mobileOpen ? "≡" : "×"}
+								</div>
+							</button>
+						</div>
 					</div>
-				</div>
+				</Container>
 			</header>
 
 			{mobileOpen && (

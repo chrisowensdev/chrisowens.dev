@@ -5,6 +5,7 @@ import Image from "next/image";
 import { about } from "@/data/about";
 import { MapPin, Mail, Sparkles } from "lucide-react";
 import FadeIn from "./FadeIn";
+import Container from "./Container";
 
 export default function AboutMe() {
 	return (
@@ -13,7 +14,7 @@ export default function AboutMe() {
 			// Brand blue background with high-contrast foreground
 			style={{ backgroundColor: "#2175a2" }}
 		>
-			<div className="mx-auto max-w-7xl px-4 py-16 md:py-24">
+			<Container className="mx-auto max-w-7xl px-4 py-16 md:py-24">
 				<div className="grid gap-10 md:grid-cols-[1.15fr_0.85fr] items-start">
 					{/* LEFT: copy */}
 					<FadeIn>
@@ -187,7 +188,7 @@ export default function AboutMe() {
 						</div>
 					</FadeIn>
 				</div>
-			</div>
+			</Container>
 		</section>
 	);
 }

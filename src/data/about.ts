@@ -5,9 +5,9 @@ export const about = {
 	location: "Richmond, VA",
 	email: "chris@chrisowens.dev",
 	headshot: "/about-me-image.png", // put a square image in /public
-	blurb: "I’m a full-stack developer who builds clean, fast, SEO-ready websites and apps. I have been in the industry for over 7 years developing custom websites and applications where I help small businesses turn their sites into real growth engines.",
+	blurb: "I’m a full-stack developer who builds clean, fast, SEO-ready websites and apps. I have been in the industry for over 5 years developing custom websites and applications where I help small businesses turn their sites into real growth engines.",
 	highlights: [
-		"7+ years building web & mobile (Next.js, WordPress, React Native)",
+		"5+ years building web & mobile (Next.js, WordPress, React Native)",
 		"Performance & Core Web Vitals minded",
 		"Accessibility-first (WCAG) & SEO best practices",
 	],
@@ -24,6 +24,6 @@ export const about = {
 		primaryText: "Book a Free Call",
 		primaryHref: "#contact",
 		secondaryText: "Download Resume",
-		secondaryHref: "/Chris-Owens-Resume.pdf",
+		secondaryHref: "/Christopher-Owens-Resume.pdf",
 	},
 };

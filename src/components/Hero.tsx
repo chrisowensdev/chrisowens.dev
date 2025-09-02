@@ -1,6 +1,7 @@
 // components/Hero.tsx
 "use client";
 
+import Container from "./Container";
 import FadeIn from "./FadeIn";
 
 const BRAND = { primary: "#2175a2", accent: "#21a37c" };
@@ -8,7 +9,7 @@ const BRAND = { primary: "#2175a2", accent: "#21a37c" };
 export default function Hero() {
 	return (
 		<section className="relative overflow-hidden">
-			<div className="mx-auto max-w-7xl px-4 py-20 md:py-28 grid md:grid-cols-2 gap-10 items-center">
+			<Container className="mx-auto max-w-7xl px-4 py-20 md:py-28 grid md:grid-cols-2 gap-10 items-center">
 				<FadeIn>
 					<h1 className="text-4xl md:text-6xl font-semibold leading-tight tracking-tight">
 						Websites that elevate your business.
@@ -88,7 +89,7 @@ export default function Hero() {
 						</div>
 					</div>
 				</FadeIn>
-			</div>
+			</Container>
 		</section>
 	);
 }

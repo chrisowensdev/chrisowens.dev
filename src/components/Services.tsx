@@ -4,6 +4,7 @@
 import { Laptop, Server, LineChart, Palette, ShieldCheck } from "lucide-react";
 import FadeIn from "./FadeIn";
 import { services } from "@/data/services";
+import Container from "./Container";
 
 const BRAND = { primary: "#2175a2", accent: "#21a37c" };
 const Icons = {
@@ -22,7 +23,7 @@ export default function Services() {
 			className="border-y"
 			style={{ backgroundColor: "rgba(255,255,255,0.7)" }}
 		>
-			<div className="mx-auto max-w-7xl px-4 py-16 md:py-24">
+			<Container className="mx-auto max-w-7xl px-4 py-16 md:py-24">
 				<h2 className="text-2xl md:text-3xl font-semibold">Services</h2>
 				<div className="mt-8 grid md:grid-cols-3 gap-6">
 					{services.map((s, i) => {
@@ -62,7 +63,7 @@ export default function Services() {
 						);
 					})}
 				</div>
-			</div>
+			</Container>
 		</section>
 	);
 }
