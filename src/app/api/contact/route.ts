@@ -15,6 +15,16 @@ const schema = z.object({
 		.transform((v) => v?.trim()), // honeypot
 });
 
+function getErrorMessage(e: unknown): string {
+	if (e instanceof Error) return e.message;
+	if (typeof e === "string") return e;
+	try {
+		return JSON.stringify(e);
+	} catch {
+		return "Unknown error";
+	}
+}
+
 // Fail fast if env is missing
 function assertEnv() {
 	const missing: string[] = [];
@@ -90,10 +100,11 @@ export async function POST(req: Request) {
 		}
 
 		return NextResponse.json({ ok: true });
-	} catch (e: any) {
-		console.error("Contact route error:", e);
+	} catch (e: unknown) {
+		const message = getErrorMessage(e);
+		console.error("Contact route error:", message, e);
 		return NextResponse.json(
-			{ ok: false, error: e?.message || "Server error" },
+			{ ok: false, error: message },
 			{ status: 500 }
 		);
 	}
