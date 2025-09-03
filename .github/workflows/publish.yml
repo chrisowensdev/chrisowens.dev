@@ -4,6 +4,9 @@ on:
     push:
         branches: [main]
 
+permissions:
+    contents: write # <-- allow push
+
 jobs:
     build:
         runs-on: ubuntu-latest
