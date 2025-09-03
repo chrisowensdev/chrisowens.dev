@@ -53,7 +53,7 @@ export default function Contact() {
 					</p>
 					<ul className="mt-6 space-y-2 text-sm text-neutral-700">
 						<li>📍 Richmond, VA</li>
-						<li>✉️ hello@elevatedevworks.com</li>
+						<li>✉️ chris@chrisowens.dev</li>
 					</ul>
 				</div>
 
