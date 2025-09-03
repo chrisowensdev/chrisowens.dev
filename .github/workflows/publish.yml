@@ -1,3 +1,4 @@
+# .github/workflows/publish.yml
 name: Build & publish static site to deploy
 on:
     push:
@@ -11,16 +12,17 @@ jobs:
             - uses: actions/setup-node@v4
               with:
                   node-version: 20
-                  cache: "npm"
+                  cache: npm
             - run: npm ci
+
+            # If you're generating sitemap/robots with next-sitemap,
+            # do it BEFORE build so they get copied into out/
+            - run: npm run sitemap
+
+            # This now creates the out/ folder because of output: 'export'
             - run: npm run build
-            - run: npx next export
 
-            # If contact.php is in public/, it is already copied into out/.
-            # If you keep it elsewhere, copy it into out/:
-            # - run: cp public/contact.php out/
-
-            - name: Publish out/ to deploy branch
+            - name: Publish to deploy branch
               uses: JamesIves/github-pages-deploy-action@v4
               with:
                   branch: deploy

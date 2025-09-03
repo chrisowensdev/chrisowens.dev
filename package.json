@@ -9,7 +9,7 @@
 		"lint": "next lint",
 		"export": "next export",
 		"sitemap": "next-sitemap",
-		"static": "npm run build && npm run sitemap && npm run export"
+		"static": "npm run sitemap && npm run build"
 	},
 	"dependencies": {
 		"@radix-ui/react-checkbox": "^1.3.2",
