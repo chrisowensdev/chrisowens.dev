@@ -8,10 +8,10 @@ export default function Footer() {
 					Chris Owens
 				</p>
 				<div className="flex gap-4">
-					<a href="#" className="hover:opacity-70">
+					<a href="/privacy" className="hover:opacity-70">
 						Privacy
 					</a>
-					<a href="#" className="hover:opacity-70">
+					<a href="/terms" className="hover:opacity-70">
 						Terms
 					</a>
 				</div>
