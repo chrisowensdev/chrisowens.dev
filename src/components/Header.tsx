@@ -4,6 +4,7 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import Container from "./Container";
+import Link from "next/link";
 
 const BRAND = { primary: "#2175a2", accent: "#21a37c" };
 
@@ -23,7 +24,7 @@ export default function Header() {
 			>
 				<Container>
 					<div className="mx-auto max-w-7xl px-4 py-3 flex items-center justify-between">
-						<div className="flex items-center gap-3">
+						<Link href="/" className="flex items-center gap-3">
 							<Image
 								src="/profile-image.png"
 								width={40}
@@ -34,7 +35,7 @@ export default function Header() {
 							<span className="font-semibold">
 								ChrisOwens.Dev
 							</span>
-						</div>
+						</Link>
 
 						<nav className="hidden md:flex gap-6 text-sm">
 							<a href="#about" className="hover:opacity-70">
