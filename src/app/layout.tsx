@@ -1,14 +1,9 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Inter, Plus_Jakarta_Sans } from "next/font/google";
+import { text, display } from "./fonts";
 import SEOJsonLd from "@/components/SEOJsonLd";
-
-const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
-const plusJakarta = Plus_Jakarta_Sans({
-	subsets: ["latin"],
-	weight: ["400", "700"],
-	variable: "--font-jakarta",
-});
+import type { Viewport } from "next";
+export const viewport: Viewport = { themeColor: "#2175a2" };
 
 export const metadata: Metadata = {
 	metadataBase: new URL("https://chrisowens.dev"),
@@ -54,10 +49,8 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<html lang="en">
-			<body
-				className={`${inter.variable} ${plusJakarta.variable} antialiased`}
-			>
+		<html lang="en" className={`${text.variable} ${display.variable}`}>
+			<body>
 				<SEOJsonLd />
 				{children}
 			</body>

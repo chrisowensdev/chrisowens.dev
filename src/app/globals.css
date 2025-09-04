@@ -18,11 +18,19 @@
 	--color-accent: #3b82f6;
 	--color-soft: #f9fafb;
 	--color-neutral: #6b7280;
+	--font-sans: var(--font-text), ui-sans-serif, system-ui, -apple-system,
+		"Segoe UI", Roboto, Helvetica, Arial, "Apple Color Emoji",
+		"Segoe UI Emoji";
+	--font-display: var(--font-display), var(--font-text), ui-sans-serif,
+		system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial;
 }
 
 :root {
-	--font-inter: "InterVariable";
-	--font-jakarta: "Plus Jakarta Sans";
+	--font-sans: var(--font-text), ui-sans-serif, system-ui, -apple-system,
+		"Segoe UI", Roboto, Helvetica, Arial, "Apple Color Emoji",
+		"Segoe UI Emoji";
+	--font-display: var(--font-display), var(--font-text), ui-sans-serif,
+		system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial;
 	--radius: 0.625rem;
 	--background: oklch(1 0 0);
 	--foreground: oklch(0.129 0.042 264.695);
@@ -159,7 +167,12 @@
 	* {
 		@apply border-border outline-ring/50;
 	}
+	h1,
+	h2,
+	h3 {
+		@apply font-display font-semibold tracking-tight;
+	}
 	body {
-		@apply bg-background text-foreground;
+		@apply bg-background text-foreground font-sans;
 	}
 }
