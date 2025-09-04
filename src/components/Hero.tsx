@@ -18,7 +18,7 @@ export default function Hero() {
 						We design, build, and host high-performing websites for
 						small businesses.
 					</p>
-					<div className="mt-8 flex gap-3">
+					<div className="w-full pt-5 flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4">
 						<a
 							href="#contact"
 							className="rounded-xl px-5 py-3 text-white font-medium"
