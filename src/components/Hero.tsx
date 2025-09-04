@@ -11,11 +11,11 @@ export default function Hero() {
 		<section className="relative overflow-hidden">
 			<Container className="mx-auto max-w-7xl px-4 py-20 md:py-28 grid md:grid-cols-2 gap-10 items-center">
 				<FadeIn>
-					<h1 className="text-4xl md:text-6xl font-semibold leading-tight tracking-tight">
+					<h1 className="text-4xl md:text-6xl leading-tight tracking-tight">
 						Websites that elevate your business.
 					</h1>
 					<p className="mt-5 text-lg text-neutral-700">
-						We design, build, and host high-performing websites for
+						I design, build, and host high-performing websites for
 						small businesses.
 					</p>
 					<div className="w-full pt-5 flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4">
