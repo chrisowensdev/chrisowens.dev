@@ -71,7 +71,7 @@ export default function Hero() {
 							>
 								<video
 									src="/hero-demo.mp4"
-									poster="/hero-poster.jpg"
+									poster="/hero-poster.webp"
 									autoPlay
 									muted
 									loop
