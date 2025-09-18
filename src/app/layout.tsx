@@ -31,7 +31,7 @@ export const metadata: Metadata = {
 
 	icons: {
 		// If you prefer explicit control in addition to app/icon.png:
-		icon: "/favicon.ico",
+		icon: "/elevate-logo-symbol-48x48.png",
 		apple: "/apple-touch-icon.png",
 		other: [
 			{
